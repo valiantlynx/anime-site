@@ -94,3 +94,11 @@ type Episode = {
     totalepisode: string,
 }
 
+interface Breadcrumb {
+    label: string;
+    url: string;
+}
+
+interface BreadcrumbsProps {
+    items: Breadcrumb[];
+}

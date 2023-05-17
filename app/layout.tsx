@@ -1,4 +1,4 @@
-import BreadCrumbs from './components/BreadCrumbs'
+
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import './globals.css'
@@ -21,7 +21,7 @@ export default function RootLayout({
 
       <body className={`${inter.className} bg-base-200`}>
           <Navbar />
-          <BreadCrumbs />
+        
           {children}
           <Footer />
         

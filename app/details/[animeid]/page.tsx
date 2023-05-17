@@ -1,6 +1,7 @@
 import getDetails from '@/utils/getDetails';
 import getPopular from '@/utils/getPopular';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // turn this ssr to ssg 
 export async function generateStaticParams() {
@@ -49,7 +50,10 @@ async function page({ params }: { params: { animeid: string } }) {
   for (let i = 1; i <= totalepisode; i++) {
     episodeList.push(<div key={i}>
       <h3>Episode {i}</h3>
-      <a href={`/details/${animeid}/episode/${i}`}>Watch Now</a>
+
+      <Link href={`/details/${animeid}/episode/${i}`}>
+        Watch Now
+      </Link>
     </div>)
   }
 

@@ -10,8 +10,6 @@ function Search() {
     const [search, setSearch] = useState('')
     const [results, setResults] = useState([])
     const [loading, setLoading] = useState(false)
-    const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
-
 
     async function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
         setSearch(e.target.value)

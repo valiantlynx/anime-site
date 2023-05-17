@@ -12,32 +12,32 @@ function Navbar() {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li>
-                            <Link 
-                            href="/genre-list"
+                            <Link
+                                href="/genre-list"
                             >
                                 genre
                             </Link>
                         </li>
-                        <li><Link 
+                        <li><Link
                             href="/popular"
-                            >
-                                popular
-                            </Link></li>
-                        <li><Link 
+                        >
+                            popular
+                        </Link></li>
+                        <li><Link
                             href="/recent"
-                            >
-                                recent
-                            </Link></li>
+                        >
+                            recent
+                        </Link></li>
                     </ul>
                 </div>
             </div>
             <div className="navbar-center">
 
-                <a
+                <Link
                     href="/"
                     className="btn btn-ghost normal-case text-xl"  >
                     Anime Variant
-                </a>
+                </Link>
             </div>
             <div className="navbar-end">
                 <div className="dropdown dropdown-end">
@@ -58,19 +58,19 @@ function Navbar() {
                 <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                  
+
                             <Image src="https://daisyui.com//images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Picture of the author" width={500} height={500} />
                         </div>
                     </label>
                     <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
                         <li>
-                            <a className="justify-between">
+                            <Link href="/profile" className="justify-between">
                                 Profile
                                 <span className="badge">New</span>
-                            </a>
+                            </Link>
                         </li>
-                        <li><a>Settings</a></li>
-                        <li><a>Logout</a></li>
+                        <li><Link href="/settings" >Settings</Link></li>
+                        <li><Link href="/logout" >Logout</Link></li>
                     </ul>
                 </div>
             </div>

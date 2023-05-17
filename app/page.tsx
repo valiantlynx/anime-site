@@ -1,5 +1,4 @@
 "use client"
-import Hero from './components/Hero'
 import Carousel from './components/Carousel'
 import Recent from './recent/page'
 import getPopular from '@/utils/getPopular';
@@ -21,7 +20,6 @@ export default async function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-10 bg-base-200">
       <Carousel animeListArray={animeList} />
       <Recent />
-      <Hero />
     </main>
   )
 }
