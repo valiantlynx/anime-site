@@ -12,7 +12,10 @@ const nextConfig = {
         URL: "https://animevariant-com-api.vercel.app/api/",
     },
     images: {
-        domains: ["gogocdn.net"],
+        domains: [
+            "gogocdn.net",
+            "daisyui.com"
+        ],
     },
     reactStrictMode: true,
     output: 'standalone',

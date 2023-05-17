@@ -3,6 +3,7 @@ import getGenre from "@/utils/getGenre";
 import getGenreList from "@/utils/getGenreList";
 import Link from "next/link";
 import { useState, useEffect } from 'react';
+import Image from "next/image";
 
 
 // turn this ssr to ssg 
@@ -15,7 +16,7 @@ export async function generateStaticParams() {
 
 }
 
-async function page({ params }: { params: { genretype: string, page: number } }) {
+async function Genre({ params }: { params: { genretype: string, page: number } }) {
 
   const [page, setPage] = useState<number>(1);
   const [animeList, setAnimeList] = useState<GenreProps[]>([]);
@@ -30,7 +31,7 @@ async function page({ params }: { params: { genretype: string, page: number } })
       setAnimeList(animeList);
     }
     getAnimeList();
-  }, [page]);
+  }, [page, genretype]);
 
 
   return <div className="container mx-auto px-4">
@@ -41,7 +42,7 @@ async function page({ params }: { params: { genretype: string, page: number } })
       <div key={index}>
         <Link href={`/details/${anime.id}`} aria-label={anime.title} >
           <h4>{anime.title}</h4>
-          <img src={anime.image} alt={anime.title} width={200} />
+          <Image src={anime.image} alt={anime.title} width={200} height={200} />
         </Link>
 
       </div>
@@ -50,4 +51,4 @@ async function page({ params }: { params: { genretype: string, page: number } })
   </div>;
 }
 
-export default page;
+export default Genre;

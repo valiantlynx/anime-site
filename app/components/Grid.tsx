@@ -3,9 +3,9 @@ import Card from './Card'
 import Pagination from "../components/Pagination";
 
 
-function Grid({ children, page, setPage }: any) {
+function Grid({ animeListArray, page, setPage }: any) {
     // map through children and render each child as a card
-    const gridItems = children.map((child: any, index: number) => {
+    const gridItems = animeListArray.map((child: any, index: number) => {
         return (
             <Card key={index} child={child} />
         )

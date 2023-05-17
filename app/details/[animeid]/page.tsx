@@ -1,5 +1,6 @@
 import getDetails from '@/utils/getDetails';
 import getPopular from '@/utils/getPopular';
+import Image from 'next/image';
 
 // turn this ssr to ssg 
 export async function generateStaticParams() {
@@ -57,7 +58,7 @@ async function page({ params }: { params: { animeid: string } }) {
 
   return <div>
     <h1>{title}</h1>
-    <img src={image} alt={title} />
+    <Image src={image} alt={title} width={200} height={300} />
     <p>{type}</p>
     <p>{summary}</p>
     <p>{relased}</p>
