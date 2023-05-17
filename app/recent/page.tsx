@@ -15,8 +15,7 @@ export async function generateStaticParams() {
 
 }
 
-async function page() {
-
+function Recent() {
   const [page, setPage] = useState<number>(1);
   const [animeList, setAnimeList] = useState<RecentProps[]>([]);
 
@@ -28,11 +27,12 @@ async function page() {
     getAnimeList();
   }, [page]);
 
-
-  return <div className="container mx-auto px-4 bg-base-200">
-    <h1 className="text-3xl font-bold mt-8 mb-4">Recent Anime - Page {page}</h1>
-    <Grid children={animeList} page={page} setPage={setPage} />
-  </div>;
+  return (
+    <div className="container mx-auto px-4 bg-base-200">
+      <h1 className="text-3xl font-bold mt-8 mb-4">Recent Anime - Page {page}</h1>
+      <Grid children={animeList} page={page} setPage={setPage} />
+    </div>
+  );
 }
 
-export default page;
+export default Recent;

@@ -14,7 +14,7 @@ function Grid({ children, page, setPage }: any) {
     return (
         <>
             <Pagination page={page} setPage={setPage} className=" hover" />
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 lg:grid-cols-6">
                 {gridItems}
             </div>
             <Pagination page={page} setPage={setPage} className=" hover" />
