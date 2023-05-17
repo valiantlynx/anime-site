@@ -4,7 +4,7 @@ import getPopular from '@/utils/getPopular';
 // turn this ssr to ssg 
 export async function generateStaticParams() {
   const animeList: any = await getPopular(1);
-  
+
   return animeList.map((anime: PopularAnimeProps) => ({
     postId: anime.id,
   }))
@@ -29,7 +29,7 @@ export function generateMetadata({ params }: { params: { animeid: string } }) {
 
 async function page({ params }: { params: { animeid: string } }) {
   const animeid = params.animeid;
-  
+
   const {
     title,
     image,
@@ -43,6 +43,18 @@ async function page({ params }: { params: { animeid: string } }) {
 
   }: any = await getDetails(animeid);
 
+  // make an array of episodes  <Episode />
+  const episodeList = [];
+  for (let i = 1; i <= totalepisode; i++) {
+    episodeList.push(<div key={i}>
+      <h3>Episode {i}</h3>
+      <a href={`/details/${animeid}/episode/${i}`}>Watch Now</a>
+    </div>)
+  }
+
+
+
+
   return <div>
     <h1>{title}</h1>
     <img src={image} alt={title} />
@@ -53,6 +65,8 @@ async function page({ params }: { params: { animeid: string } }) {
     <p>{status}</p>
     <p>{totalepisode}</p>
     <p>{Othername}</p>
+    Episodes: {episodeList}
+
 
   </div>;
 }

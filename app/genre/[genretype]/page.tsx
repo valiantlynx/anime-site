@@ -34,7 +34,7 @@ async function page({ params }: { params: { genretype: string, page: number } })
 
 
   return <div className="container mx-auto px-4">
-    <h1 className="text-3xl font-bold mt-8 mb-4">Popular Anime - Page {page}</h1>
+    <h1 className="text-3xl font-bold mt-8 mb-4">{genretype} Anime - Page {page}</h1>
     <button onClick={() => setPage(page - 1)} disabled={page === 1}>Previous Page</button>
     <button onClick={() => setPage(page + 1)}>Next Page</button>
     {animeList.map((anime, index) => (
