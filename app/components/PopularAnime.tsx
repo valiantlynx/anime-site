@@ -23,14 +23,3 @@ export default function PopularAnime() {
         </div>
     );
 }
-
-export async function getServerSideProps({ params }: any) {
-    const page = params.page;
-    const animeList: any = await getPopular(page);
-
-    return {
-        props: {
-            animeList,
-        },
-    };
-}

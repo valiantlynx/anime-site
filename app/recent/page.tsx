@@ -23,15 +23,6 @@ function Recent() {
   );
 }
 
-export async function getServerSideProps({ params }: any) {
-  const page = params.page;
-  const animeList: any = await getRecent(page);
-  
-  return {
-    props: {
-      animeList,
-    },
-  };
-}
+
 
 export default Recent;

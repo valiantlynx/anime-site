@@ -4,9 +4,6 @@ import Carousel from './components/Carousel'
 import Recent from './recent/page'
 import getPopular from '@/utils/getPopular';
 import { useState, useEffect } from 'react';
-import { URL } from '@/utils/URLS';
-import axios from 'axios';
-import Loading from './loading';
 
 export default async function Home() {
   const [animeList, setAnimeList] = useState<PopularAnimeProps[]>([]);
@@ -27,20 +24,6 @@ export default async function Home() {
       <Hero />
     </main>
   )
-}
-
-export async function getServerSideProps({ params }: any) {
-  const { page } = params;
-  const response = await axios.get(`${URL.POPULAR}${page}`,
-      { headers: { 'Access-Control-Allow-Origin': '*' } }
-  );
-  const { animeList }: { animeList: string[] } = response.data;
-
-  return {
-      props: {
-          animeList,
-      },
-  };
 }
 
 

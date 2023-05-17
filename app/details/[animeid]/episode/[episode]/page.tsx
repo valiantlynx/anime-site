@@ -8,8 +8,6 @@ async function page({ params }: { params: { animeid: string, episode: string } }
 
   const data: any = await getEpisode(animeid, episode);
 
-console.log(data)
-console.log(params)
   return <div>
     <main className="mainvideo">
       <iframe width="560" height="100%"
