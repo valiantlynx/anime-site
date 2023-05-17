@@ -4,20 +4,15 @@ import getEpisode from '@/utils/getEpisode';
 
 async function page({ params }: { params: { animeid: string, episode: string } }) {
   const animeid = params.animeid;
-  const episode2 = "1";
+  const episode = params.episode;
 
-  const data: any = await getEpisode(animeid, episode2);
+  const data: any = await getEpisode(animeid, episode);
 
-  console.log("link", data.link);
-  console.log("links", data.links);
-  console.log("totalepisode", data.totalepisode);
-
-  // Prepend protocol to the URL
-  const videoUrl = `https:${data.link}`; // Assuming the server supports HTTP
-
+console.log(data)
+console.log(params)
   return <div>
     <main className="mainvideo">
-      <iframe width="560" height="315"
+      <iframe width="560" height="100%"
         src={data.link}
         title="YouTube video player"
    
