@@ -32,11 +32,11 @@ function Navbar() {
             </div>
             <div className="navbar-center">
 
-                <Link
+                <a
                     href="/"
                     className="btn btn-ghost normal-case text-xl"  >
                     Anime Variant
-                </Link>
+                </a>
             </div>
             <div className="navbar-end">
                 <div className="dropdown dropdown-end">
