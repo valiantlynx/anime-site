@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Card from './Card'
 import Pagination from "../components/Pagination";
