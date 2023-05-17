@@ -15,23 +15,6 @@ export async function generateStaticParams() {
 
 }
 
-export async function generateMetadata({ params }: { params: { genretype: string } }) {
-  const page = 1;
-  const genretype = params.genretype;
-  const animes: any = await getGenre(
-    genretype,
-    page
-  );
-
-  for (const anime of animes) {
-    return {
-      title: anime.title,
-      description: anime.id,
-    };
-  }
-}
-
-
 async function page({ params }: { params: { genretype: string, page: number } }) {
 
   const [page, setPage] = useState<number>(1);

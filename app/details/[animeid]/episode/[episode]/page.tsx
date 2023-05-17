@@ -1,23 +1,6 @@
 
 "use client"
-import getDetails from '@/utils/getDetails';
 import getEpisode from '@/utils/getEpisode';
-
-export function generateMetadata({ params }: { params: { animeid: string, episode: string } }) {
-  const { animeid } = params
-  const { title }: any = getDetails(animeid); // deduped
-
-  if (!title) {
-    return {
-      title: 'Post Not Found',
-    }
-  }
-
-  return {
-    title,
-  }
-}
-
 
 async function page({ params }: { params: { animeid: string, episode: string } }) {
   const animeid = params.animeid;

@@ -15,19 +15,6 @@ export async function generateStaticParams() {
 
 }
 
-export async function generateMetadata() {
-  const page = 1;
-  const animes: any = await getRecent(page);
-
-  for (const anime of animes) {
-    return {
-      title: anime.title,
-      description: anime.id,
-    };
-  }
-}
-
-
 async function page() {
 
   const [page, setPage] = useState<number>(1);
