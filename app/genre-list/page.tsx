@@ -1,5 +1,6 @@
 import getGenreList from "@/utils/getGenreList";
 import Link from "next/link";
+import Breadcrumbs from "../components/BreadCrumbs";
 // turn this ssr to ssg 
 export async function generateStaticParams() {
   const genreList: any = await getGenreList();
@@ -24,8 +25,13 @@ export async function generateMetadata() {
 async function page() {
   const genreList: any = await getGenreList();
 
+  const breadcrumbs = [
+    { label: 'Home', url: '/' },
+    { label: `Genre List`, url: `/genre-list` },
+  ];
 
   return <div>
+    <Breadcrumbs items={breadcrumbs} />
     <h1>Genre List</h1>
     <ul>
       {genreList.map((list: string) => (

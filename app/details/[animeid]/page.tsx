@@ -1,3 +1,4 @@
+import Breadcrumbs from '@/app/components/BreadCrumbs';
 import getDetails from '@/utils/getDetails';
 import getPopular from '@/utils/getPopular';
 import Image from 'next/image';
@@ -31,6 +32,10 @@ export function generateMetadata({ params }: { params: { animeid: string } }) {
 
 async function page({ params }: { params: { animeid: string } }) {
   const animeid = params.animeid;
+  const breadcrumbs = [
+    { label: 'Home', url: '/' },
+    { label: `${animeid}`, url: `/details/${animeid}` },
+  ];
 
   const {
     title,
@@ -61,6 +66,7 @@ async function page({ params }: { params: { animeid: string } }) {
 
 
   return <div>
+    <Breadcrumbs items={breadcrumbs} />
     <h1>{title}</h1>
     <Image src={image} alt={title} width={200} height={300} />
     <p>{type}</p>

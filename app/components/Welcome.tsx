@@ -3,6 +3,7 @@ import { URL } from "../../utils/URLS";
 import axios from 'axios';
 import Link from 'next/link';
 import { useState, useEffect } from "react";
+import Breadcrumbs from "./BreadCrumbs";
 
 export default function Welcome() {
     const [api, setApi] = useState<API>({
@@ -18,6 +19,11 @@ export default function Welcome() {
         version: "1.0.0"
 
     });
+
+    const breadcrumbs = [
+        { label: 'Home', url: '/' },
+        { label: `Welcome`, url: `/welcome` },
+    ];
   
 
     useEffect(() => {
@@ -25,13 +31,13 @@ export default function Welcome() {
             const response = await axios.get(URL.DOCS);
             const api: API = response.data.api;
             setApi(api);
-            
         }
         getApi();
     }, []);
 
     return (
         <div className="container mx-auto px-4">
+            <Breadcrumbs items={breadcrumbs} />
             <h1 className="text-3xl font-bold mt-8 mb-4">Welcome to AnimeVariant API!</h1>
             <p>{api.description}</p>
             <h2 className="text-2xl font-bold mt-8 mb-4">Available API Endpoints:</h2>
