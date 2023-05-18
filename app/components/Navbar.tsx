@@ -1,8 +1,12 @@
+"use client"
 import Search from "./Search"
 import Link from "next/link"
 import Image from "next/image"
 
 function Navbar() {
+    function handleLogout() {
+        //  TODO: Implement your logout logic here
+    }
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -64,13 +68,13 @@ function Navbar() {
                     </label>
                     <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
                         <li>
-                            <Link href="/profile" className="justify-between">
+                            <Link href={`/profile/juma-musa`} className="justify-between">
                                 Profile
                                 <span className="badge">New</span>
                             </Link>
                         </li>
                         <li><Link href="/settings" >Settings</Link></li>
-                        <li><Link href="/logout" >Logout</Link></li>
+                        <li><button onClick={handleLogout} >Logout</button></li>
                     </ul>
                 </div>
             </div>
