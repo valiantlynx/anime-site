@@ -27,6 +27,7 @@ async function page({ params }: { params: { animeid: string, episode: string } }
             title={`${animeid} Episode ${episode}`}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            sandbox="allow-scripts allow-same-origin"
           ></iframe>
         </div>
         <div className="container mx-auto px-4 py-8">
