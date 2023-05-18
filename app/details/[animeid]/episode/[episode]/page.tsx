@@ -22,11 +22,13 @@ async function page({ params }: { params: { animeid: string, episode: string } }
         <Breadcrumbs items={breadcrumbs} />
         <div className="flex flex-col items-center justify-center h-screen">
        
-          <video src={data.link}
+          <video
             controls
             className="w-full h-full"
 
           >
+            <source media={data.link} type="video/mp4" />
+            
 
           </video>
         </div>
