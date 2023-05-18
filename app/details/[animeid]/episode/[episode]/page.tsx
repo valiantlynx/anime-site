@@ -24,7 +24,7 @@ async function page({ params }: { params: { animeid: string, episode: string } }
        
           <video src={data.link}
             controls
-            className="w-full h-auto"
+            className="w-full h-full"
 
           >
 
