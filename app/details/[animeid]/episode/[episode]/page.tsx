@@ -1,7 +1,23 @@
 
-"use client"
 import Breadcrumbs from '@/app/components/BreadCrumbs';
 import getEpisode from '@/utils/getEpisode';
+
+export async function generateMetadata({ params }: { params: { animeid: string, episode: string } }) {
+  const animeid = params.animeid;
+  const episode = params.episode;
+  const data: any = await getEpisode(animeid, episode);
+
+  if (!data) {
+    return {
+      title: 'Episode Not Found',
+    }
+  }
+
+  return {
+    title: `${animeid} Episode ${episode}`,
+  }
+}
+
 
 async function page({ params }: { params: { animeid: string, episode: string } }) {
   const animeid = params.animeid;

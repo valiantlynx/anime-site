@@ -30,7 +30,6 @@ export function generateMetadata({ params }: { params: { animeid: string } }) {
   }
 }
 
-
 async function page({ params }: { params: { animeid: string } }) {
   const animeid = params.animeid;
   const breadcrumbs = [

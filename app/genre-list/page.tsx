@@ -3,6 +3,10 @@ import getGenreList from "@/utils/getGenreList";
 import Link from "next/link";
 import { useState, useEffect } from 'react';
 
+export const metadata = {
+  title: `Genre List`,
+}
+
 async function GenreList() {
   const [genreList, setGenreList] = useState<GenreList[]>([]);
 

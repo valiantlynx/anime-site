@@ -1,4 +1,8 @@
 import PopularAnime from '../components/PopularAnime'
+export const metadata = {
+  title: "Popular Anime",
+}
+
 
 function page() {
   return (

@@ -7,7 +7,10 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'AnimeVariant watch anime online free',
+  title: {
+    default: 'AnimeVariant watch anime online free',
+    template: '%s | AnimeVariant watch anime online free',
+  },
   description: 'Watch anime online free in high quality 720p, 1080p english subbed and dubbed on any browser and devices. Watch anime similar to kissanime, 9anime and gogoanime in HTML5 videos format with different anime sources',
 }
 

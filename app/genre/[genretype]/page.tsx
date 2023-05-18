@@ -4,6 +4,13 @@ import { useState, useEffect } from 'react';
 import Breadcrumbs from "@/app/components/BreadCrumbs";
 import Grid from "@/app/components/Grid";
 
+export const metadata = ({ params }: { params: { genretype: string } }) => {
+  const { genretype } = params;
+  return {
+    title: `${genretype} Anime - Page 1`,
+  };
+};
+
 
 async function Genre({ params }: { params: { genretype: string } }) {
   const [page, setPage] = useState<number>(1);
