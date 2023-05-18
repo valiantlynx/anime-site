@@ -21,16 +21,13 @@ async function page({ params }: { params: { animeid: string, episode: string } }
       <main className="bg-gray-900 min-h-screen">
         <Breadcrumbs items={breadcrumbs} />
         <div className="flex flex-col items-center justify-center h-screen">
-       
-          <video
-            controls
+          <iframe
             className="w-full h-full"
-
-          >
-            <source media={data.link} type="video/mp4" />
-            
-
-          </video>
+            src={data.link}
+            title={`${animeid} Episode ${episode}`}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
         <div className="container mx-auto px-4 py-8">
           <h1 className="text-2xl font-bold text-white mb-4">Episodes: {data.totalepisode}</h1>
