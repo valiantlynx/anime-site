@@ -42,8 +42,16 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  console.log('RootLayout', process.env.GA_MEASUREMENT_ID)
   return (
     <html lang="en">
+
+
+      <body className={`${inter.className} bg-base-200`}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_MEASUREMENT_ID}`}
@@ -76,13 +84,6 @@ export default function RootLayout({
         `,
         }}
       />
-
-      <body className={`${inter.className} bg-base-200`}>
-        <Navbar />
-        {children}
-        <Footer />
-
-      </body>
     </html>
   )
 }
