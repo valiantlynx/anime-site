@@ -3,15 +3,14 @@ import Link from 'next/link'
 import Loading from '../recent/loading';
 
 function Card({ child }: { child: any }) {
-//       // Example usage as an image loader
-//   const ImageLoader: any = ({ height, width }: any) => {
-//     return (
-//         <Loading height={height} width={width} />
-//     );
-//   };
-
+    //       // Example usage as an image loader
+    //   const ImageLoader: any = ({ height, width }: any) => {
+    //     return (
+    //         <Loading height={height} width={width} />
+    //     );
+    //   };
     return (
-        <Link href={`/details/${child.id}/episode/${child.episodenumber}`} aria-label={child.title} className="card ">
+        <Link href={child.episodenumber ? `/details/${child.id}/episode/${child.episodenumber}` : `/details/${child.id}`} aria-label={child.title} className="card ">
             <figure>
                 <Image
                     className='h-auto max-w-full rounded-lg'
@@ -19,7 +18,7 @@ function Card({ child }: { child: any }) {
                     alt={child.title}
                     width={200}
                     height={200}
-                     />
+                />
             </figure>
             <div className=" m-4">
                 <h2 className="card-title">{child.title.substring(0, 20) + '...' || 'No Title'}</h2>
