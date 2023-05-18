@@ -1,24 +1,21 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-function Episode({ animeid, episodenumber, image }: { animeid: string, episodenumber: number, image: string }, i: number) {
-    function capitalizeFirstLetter(str: string): string {
-        return str.charAt(0).toUpperCase() + str.slice(1);
-    }
+function Episode({ animeid, episodenumber, image }: { animeid: string, episodenumber: number, image: string }) {
     return (
-        <div key={i} className="w-full md:w-10/12 lg:w-10/12 xl:w-10/12 p-4">
+        <div key={episodenumber} className="w-full md:w-10/12 lg:w-10/12 xl:w-10/12 p-4">
             <div className="relative">
                 <div className="h-48">
                     <Image
                         src={image}
-                        alt={`Episode ${i} Thumbnail`}
+                        alt={`Episode ${episodenumber} Thumbnail`}
                         layout="fill"
                         objectFit="cover"
                         className="rounded-md"
                     />
                 </div>
                 <div className="absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center">
-                    <Link href={`/details/${animeid}/episode/${i}`}>
+                    <Link href={`/details/${animeid}/episode/${episodenumber}`}>
                         <div className="flex items-center justify-center bg-gray-800 bg-opacity-50 text-white text-lg font-bold rounded-full w-12 h-12">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +35,7 @@ function Episode({ animeid, episodenumber, image }: { animeid: string, episodenu
                     </Link>
                 </div>
             </div>
-            <h3 className="text-lg font-bold mt-2">Episode {i}</h3>
+            <h3 className="text-lg font-bold mt-2">Episode {episodenumber}</h3>
         </div>
     )
 }
