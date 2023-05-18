@@ -1,34 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Anime Watching Website
 
-## Getting Started
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-First, run the development server:
+## Description
+The Anime Watching Website is a platform where users can stream and watch their favorite anime series and episodes. It provides a user-friendly interface and features to enhance the anime-watching experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
+1. Clone the repository: `git clone https://github.com/valiantlynx/anime-site.git`
+2. Navigate to the project directory: `cd anime-site`
+3. Install the dependencies: `npm install`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
+1. Start the development server: `npm start`
+2. Access the website in your browser at: `http://localhost:3000`
+3. Explore the anime catalog, select a series, and watch episodes online.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
+- Browse and search for anime series.
+- View details of each series, including title, image, type, summary, release year, genres, status, and total episodes.
+- Watch episodes online with a built-in video player.
+- Responsive design for optimal viewing experience on different devices.
+- Breadcrumbs navigation for easy navigation between pages.
 
-## Learn More
+## Contributing
+Contributions are welcome! If you'd like to contribute to the Anime site, please follow these guidelines:
+1. Fork the repository.
+2. Create a new branch for your feature/bug fix: `git checkout -b feature-name`
+3. Commit your changes: `git commit -m "Add feature/fix bug"`
+4. Push to the branch: `git push origin feature-name`
+5. Submit a pull request.
 
-To learn more about Next.js, take a look at the following resources:
+Please ensure that your code follows the project's coding style and conventions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
+This project is licensed under the [MIT License](LICENSE).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contact
+For any inquiries or questions regarding the Anime Watching Website, please feel free to reach out:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Email: valiantlynxz@gmail.com
+- Twitter: [@valiantlynx](https://twitter.com/valiantlynx)
+- GitHub: [valiantlynx](https://github.com/valiantlynx)
