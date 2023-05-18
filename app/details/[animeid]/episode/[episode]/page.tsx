@@ -22,7 +22,7 @@ async function page({ params }: { params: { animeid: string, episode: string } }
         <Breadcrumbs items={breadcrumbs} />
         <div className="flex flex-col items-center justify-center h-screen">
           <iframe
-            className="w-full"
+            className="w-full h-auto"
             src={data.link}
             title={`${animeid} Episode ${episode}`}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
