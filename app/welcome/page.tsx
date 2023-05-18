@@ -1,4 +1,5 @@
 import Welcome from '@/app/components/Welcome'
+
 export const metadata = {
   title: "Welcome to AnimeVariant",
 }

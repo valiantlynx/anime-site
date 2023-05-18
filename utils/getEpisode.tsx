@@ -11,6 +11,7 @@ async function getEpisode(id: string, episode: string) {
                 console.log(error);
             });
             const episodeData: Episode = response.data;
+            console.log("episodeData: ", episodeData);
             return episodeData;
     } catch (error) {
         console.log(error);

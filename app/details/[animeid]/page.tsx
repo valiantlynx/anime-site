@@ -15,9 +15,9 @@ export async function generateStaticParams() {
 
 }
 
-export function generateMetadata({ params }: { params: { animeid: string } }) {
+export async function generateMetadata({ params }: { params: { animeid: string } }) {
   const { animeid } = params
-  const { title }: any = getDetails(animeid); // deduped
+  const { title }: any = await getDetails(animeid); // deduped
 
   if (!title) {
     return {
