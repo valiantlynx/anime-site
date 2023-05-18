@@ -42,7 +42,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  console.log('RootLayout', process.env.GA_MEASUREMENT_ID)
   return (
     <html lang="en">
 
