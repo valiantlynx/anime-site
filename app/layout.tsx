@@ -51,6 +51,7 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
+            <Script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7827487944601896" strategy="afterInteractive" />
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_MEASUREMENT_ID}`}
