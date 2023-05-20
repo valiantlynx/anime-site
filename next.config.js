@@ -9,13 +9,14 @@ const withPWA = require("next-pwa")({
 const nextConfig = {
     env: {
         key: process.env.COUNT_API_KEY,
-        URL: "http://host.docker.internal:3200/api/",
+        URL: "https://api.animevariant.com/api/",
         GA_MEASUREMENT_ID: "G-3D40VC4QXL",
     },
     images: {
         domains: [
             "gogocdn.net",
-            "daisyui.com"
+            "daisyui.com",
+            "api.animevariant.com"
         ],
     },
     reactStrictMode: true,
