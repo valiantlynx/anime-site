@@ -9,7 +9,7 @@ const withPWA = require("next-pwa")({
 const nextConfig = {
     env: {
         key: process.env.COUNT_API_KEY,
-        URL: "https://anime-site.onrender.com/api/",
+        URL: "https://https://api.animevariant.com/api/",
         GA_MEASUREMENT_ID: "G-3D40VC4QXL",
     },
     images: {
