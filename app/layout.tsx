@@ -71,7 +71,7 @@ export default function RootLayout({
         }}
       />
       
-      <Script
+<Script
         id="clarity-toseestuff"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
