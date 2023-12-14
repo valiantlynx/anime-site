@@ -9,7 +9,7 @@ const withPWA = require("next-pwa")({
 const nextConfig = {
     env: {
         key: process.env.COUNT_API_KEY,
-        URL: "https://api.animevariant.com/api/",
+        URL: process.env.NODE_ENV === "development" ? "http://localhost:3000" : "https://api.animevariant.com/api/",
         GA_MEASUREMENT_ID: "G-3D40VC4QXL",
         CLARITY_KEY: "f9jxaugc1a"
     },
