@@ -49,3 +49,11 @@ For any inquiries or questions regarding the Anime Watching Website, please feel
 - Email: valiantlynxz@gmail.com
 - Twitter: [@valiantlynx](https://twitter.com/valiantlynx)
 - GitHub: [valiantlynx](https://github.com/valiantlynx)
+
+### adding new projects with their own git history
+```sh
+git subtree add --prefix=apps/anime-site https://github.com/valiantlynx/anime-site.git master --squash
+git subtree pull --prefix=apps/anime-site https://github.com/valiantlynx/anime-site.git master --squash
+git subtree push --prefix=apps/anime-site https://github.com/valiantlynx/anime-site.git master
+
+```
