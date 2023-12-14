@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pull": "git subtree pull --prefix=apps/anime-site https://github.com/valiantlynx/anime-site.git master --squash",
+    "push": "yarn pull && git subtree push --prefix=apps/anime-site https://github.com/valiantlynx/anime-site.git master"
   },
   "dependencies": {
     "@types/node": "20.1.5",
