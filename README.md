@@ -7,12 +7,16 @@ this project require [anime-site-api](https://github.com/valiantlynx/anime-site-
 The Anime Watching Website is a platform where users can stream and watch their favorite anime series and episodes. It provides a user-friendly interface and features to enhance the anime-watching experience.
 
 ## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+- [Anime Watching Website](#anime-watching-website)
+  - [Description](#description)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Features](#features)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Contact](#contact)
+    - [adding new projects with their own git history](#adding-new-projects-with-their-own-git-history)
 
 ## Installation
 1. Clone the repository: `git clone https://github.com/valiantlynx/anime-site.git`
