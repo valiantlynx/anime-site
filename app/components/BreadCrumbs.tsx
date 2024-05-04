@@ -3,9 +3,9 @@ import Link from 'next/link';
 
 function Breadcrumbs({ items }: BreadcrumbsProps) {
     return (
-        <div className="bg-base-200 flex min-h-[6rem] flex-wrap items-center justify-center">
+        <div className="bg-base-200 flex min-h-[4rem] flex-wrap items-center justify-left">
             <div className="text-sm breadcrumbs">
-                <ul>
+                <ul className='ml-3'>
                     {items.map((item, index) => (
                         <li key={index}>
                             {index > 0 && (

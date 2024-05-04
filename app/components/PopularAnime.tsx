@@ -27,7 +27,7 @@ export default function PopularAnime() {
     return (
         <div className="container mx-auto px-4">
             <Breadcrumbs items={breadcrumbs} />
-            <h1 className="text-3xl font-bold mt-8 mb-4">Popular Anime - Page {page}</h1>
+            <h1 className="text-3xl font-bold mt-1 mb-4">Popular Anime - Page {page}</h1>
             <Grid animeListArray={animeList} page={page} setPage={setPage} />
         </div>
     );
